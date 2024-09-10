@@ -1,0 +1,383 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.8), green, rgba(0, 0, 0, 0.8));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    z-index: 100;
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
+}
+
+/* When scrolling down, hide the header */
+.header.hidden {
+    opacity: 0; /* Hide the header */
+    pointer-events: none; /* Prevent interaction when hidden */
+}
+
+.logo {
+    font-size: 24px;
+    color: green;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: green;
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+}
+
+.home-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.home-content h3 {
+    font-size: 28px;
+    color: green;
+    margin-bottom: 40px;
+}
+
+/* Download CV Button */
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: green;
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-box:hover {
+    background-color: darkgreen;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        height: 50px;
+        padding: 0 5%;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        margin-left: 10px;
+    }
+
+    .home-content h2 {
+        font-size: 36px;
+    }
+
+    .home-content h3 {
+        font-size: 24px;
+    }
+
+    .btn-box {
+        padding: 10px 24px;
+        font-size: 14px;
+    }
+}
+
+/* Contact Page Styles */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 60px 10%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #f0f0f0; /* Light color for heading */
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Space between contact items */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    background-color: #1a1a1a; /* Dark background for contact items */
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 100%;
+    max-width: 400px; /* Limit the maximum width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow */
+}
+
+.contact-item i {
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+.contact-item span {
+    font-size: 18px;
+}
+
+.contact-item:hover {
+    background-color: #333; /* Slightly lighter background on hover */
+    transform: scale(1.05); /* Slightly enlarge the item on hover */
+}
+
+
+/* Projects Section */
+.projects {
+    padding: 60px 10%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure it takes the full viewport height */
+    background-color: #1a1a1a; /* Optional: add a background color */
+}
+
+.projects-content {
+    display: inline-block;
+    max-width: 800px;
+    width: 100%;
+}
+
+.projects h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #f0f0f0; /* Adjust text color for better visibility */
+}
+
+.project {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #f0f0f0; /* Adjust text color */
+}
+
+.project p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #dcdcdc; /* Adjust text color */
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: green;
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-box:hover {
+    background-color: darkgreen;
+    color: #ffffff; /* Change text color on hover */
+}
+
+/* Project Styles */
+.project {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #f0f0f0;
+}
+
+.project p {
+    font-size: 16px;
+    color: #dcdcdc;
+    margin-bottom: 20px;
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: green;
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-box:hover {
+    background-color: darkgreen;
+    color: #ffffff;
+}
+
+
+/* Tools Section */
+.tools-section {
+    background: #2b2b2b; /* Dark background for the tools section */
+    border-radius: 8px;
+    padding: 40px 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.tools-section h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #f0f0f0; /* Light color for heading */
+}
+
+.toggle-btn {
+    background: #4CAF50; /* Green background */
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.toggle-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.tools-content {
+    display: none; /* Initially hide the tools content */
+    margin-top: 20px;
+}
+
+.tool {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; /* Align text to the left */
+}
+
+.tool:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.tool h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #f0f0f0; /* Light color for tool title */
+}
+
+.tool p {
+    font-size: 16px;
+    color: #dcdcdc; /* Light color for tool description */
+    margin-bottom: 10px; /* Margin below the description */
+}
+
+.download-link {
+    display: block; /* Make the link a block element so it starts on a new line */
+    text-align: center; /* Center align the link text */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0 auto; /* Center the link horizontally */
+    max-width: 200px; /* Optional: limit the max width */
+}
+
+.download-link:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Footer Styles */
+.footer {
+    color: #f0f0f0; /* لون النص الأبيض أو الرمادي الفاتح */
+    position: fixed; /* تثبيت الموقع */
+    bottom: 0; /* تثبيته في أسفل الصفحة */
+    width: 100%; /* عرض كامل */
+    z-index: 1000; /* وضعه فوق العناصر الأخرى */
+
+}
+
+
+.footer p {
+    text-align: left;
+    margin: 0; /* إزالة الهوامش الافتراضية */
+    font-size: 9px; /* حجم الخط */
+}

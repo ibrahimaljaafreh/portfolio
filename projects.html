@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">GLITCH</a>
+        <nav class="navbar">
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section id="projects" class="projects">
+        <div class="projects-content">
+            <h2>My Projects</h2>
+            <div class="project">
+                <h3>Digital Forensics Lab Online</h3>
+                <p>This project involves an easy-to-use online digital forensics lab with a user-friendly GUI, designed to facilitate forensic analysis and practice.</p>
+                <p> Under Construction </p>
+                <a href="#" class="btn-box">Open Lab Now</a>
+            </div>
+            <div class="projects-content">
+                <div class="project">
+                    <h3>Web Pentration Testing Online</h3>
+                    <p>Under Construction </p>
+                    <a href="#" class="btn-box">Open Now</a>
+                </div>
+
+            <div class="tools-section">
+                <h3>My Tools</h3>
+                <button class="toggle-btn">Show Tools</button>
+                <div class="tools-content">
+                    <div class="tool">
+                        <h4>Tool 1</h4>
+                        <!-- <p>Description of Tool 1. <a href="tool1-download-link" class="download-link" target="_blank">Download Tool</a></p> -->
+                        <p>this is tool one</p>
+                        <a href="#" class="download-link" target="_blank">Download Tool</a>
+                        
+                    </div>
+                    <div class="tool">
+                        <h4>Tool 2</h4>
+                        <p>this is tool two <a href="#" class="download-link" target="_blank">Download Tool</a></p>
+                    </div>
+                    <!-- Add more tools as needed -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script>
+        document.querySelector('.toggle-btn').addEventListener('click', function() {
+            const content = document.querySelector('.tools-content');
+            const isVisible = content.style.display === 'block';
+            content.style.display = isVisible ? 'none' : 'block';
+            this.textContent = isVisible ? 'Show Tools' : 'Hide Tools';
+        });
+    </script>
+    <script>
+        document.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) { // يمكنك تعديل القيمة حسب الحاجة
+                header.classList.add('hidden');
+            } else {
+                header.classList.remove('hidden');
+            }
+        });
+    </script>
+
+
+<footer class="footer">
+    <p>&copy; 2024 Ibrahim AlJaafreh.</p>
+</footer>
+
+ 
+
+</body>
+</html>
